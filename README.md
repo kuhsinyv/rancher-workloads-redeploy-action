@@ -25,7 +25,7 @@ jobs:
     steps:
 
       - name: Redeploy
-        uses: kuhsinyv/rancher-workloads-redeploy-action@v1.1
+        uses: kuhsinyv/rancher-workloads-redeploy-action@v1.2
         env:
           API_ACCESS_ADDR: https://rancher.example.com/v1
           CLUSTER: local-example
