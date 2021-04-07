@@ -11,3 +11,8 @@ runs:
         --header "Accept: application/json" \
         --header "Content-Type: application/json" \
         --header "Authorization: Bearer ${RANCHER_TOKEN}"
+        export API_ACCESS_ADDR=""
+        export CLUSTER=""
+        export PROJECT=""
+        export NAMESPACE=""
+        export RANCHER_TOKEN=""
