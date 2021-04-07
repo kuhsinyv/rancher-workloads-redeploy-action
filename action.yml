@@ -7,7 +7,7 @@ runs:
       name: Send request to Rancher
       shell: bash
       run: |
-        curl --location --request POST "$RANCHER_WORKLOAD_URL" \
+        curl --location --request POST "${API_ACCESS_ADDR}/project/${CLUSTER}:${PROJECT}/workloads/deployment:${NAMESPACE}:${WORKLOAD}?action=redeploy" \
         --header "Accept: application/json" \
         --header "Content-Type: application/json" \
-        --header "Authorization: Bearer $RANCHER_TOKEN"
+        --header "Authorization: Bearer ${RANCHER_TOKEN}"
