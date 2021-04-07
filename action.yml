@@ -1,0 +1,13 @@
+name: Rancher Workloads Redeploy Action
+description: Rancher CD tool
+runs:
+  using: composite
+  steps:
+    - id: request
+      name: Send request to Rancher
+      shell: bash
+      run: |
+        curl --location --request POST "$RANCHER_WORKLOAD_URL" \
+        --header "Accept: application/json" \
+        --header "Content-Type: application/json" \
+        --header "Authorization: Bearer $RANCHER_TOKEN"
